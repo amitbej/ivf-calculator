@@ -6,7 +6,7 @@ import Slider from "@/components/Slider";
 import CheckboxGroup from "@/components/CheckboxGroup";
 import { calculateIVFSuccessRate } from "@/utils/calculateIVFSuccessRate";
 import Link from "next/link";
-import { ArrowBigLeft, ArrowLeft } from "lucide-react";
+import { ArrowBigLeft, ArrowLeft, GitBranchPlus, Github } from "lucide-react";
 import RadioButtonTwo from "@/components/RadioButtonTwo";
 import RadioButtonOne from "@/components/RadioButtonOne";
 
@@ -123,11 +123,11 @@ export default function InputPage() {
             Calculate
           </button>
         </div>
-      </div>{" "}
-
-
-
-      sdfgdfg
+      </div>
+     <div className="flex items-center justify-center py-4">
+     Made By Amit Bej 
+     <Link href="/"> <Github className="border p-2 bg-orange-500 text-white"/> </Link>
+     </div>
     </div>
   );
 }
