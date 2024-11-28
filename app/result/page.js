@@ -4,13 +4,25 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function ResultPage() {
-  // Use client-side rendering for search params
-  const searchParams = useSearchParams();
-  const successRateParam = searchParams?.get("successRate") || "0";
-  const successRate = parseFloat(successRateParam);
+  const [successRate, setSuccessRate] = useState(0);
+
+  useEffect(() => {
+    // Check if window is defined (client-side)
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const rateParam = urlParams.get('successRate');
+      
+      if (rateParam) {
+        const parsedRate = parseFloat(rateParam);
+        if (!isNaN(parsedRate)) {
+          setSuccessRate(parsedRate);
+        }
+      }
+    }
+  }, []);
 
   return (
     <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2C3E50] flex flex-col justify-center min-h-screen">
@@ -58,7 +70,7 @@ export default function ResultPage() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-[#1E1E1E] w-52 h-52 rounded-full shadow-2xl flex items-center justify-center">
                   <span className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#00FF94] to-[#E15B53]">
-                    {!isNaN(successRate) ? successRate.toFixed(0) : 0}%
+                    {successRate.toFixed(0)}%
                   </span>
                 </div>
               </div>
