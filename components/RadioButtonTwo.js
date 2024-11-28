@@ -4,7 +4,7 @@ const RadioButtonTwo = ({ label, options, selected, onChange }) => {
   return (
     <div className="flex flex-row mb-6 gap-2">
       <label className="text-lg font-bold mb-2">{label}</label>
-      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 pt-2 md:pt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 pt-2 md:pt-6 px-2">
         {options.map((option, index) => (
           <div key={index} className="flex items-center">
             <label className="cursor-pointer">

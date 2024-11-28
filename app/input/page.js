@@ -63,7 +63,7 @@ export default function InputPage() {
         </Link>
       </div>
       <div className="  flex flex-col md:items-center  pt-6 h-screen px-2 md:px-4">
-        <div className="font-semibold text-xl">
+        <div className="font-semibold text-xl px-2">
           {" "}
           What age range applies to you?{" "}
         </div>
@@ -72,17 +72,17 @@ export default function InputPage() {
           selected={age}
           onChange={(value) => setAge(value)}
         />
-        <div className="font-semibold text-xl"> Number of IVF Cycles? </div>
+        <div className="font-semibold text-xl px-2"> Number of IVF Cycles? </div>
         <Slider
           value={ivfCycles}
           onChange={(value) => setIVFCycles(value)}
           min={1}
           max={5}
         />
-        <div className="font-semibold text-xl pt-6">
+        <div className="font-semibold text-xl pt-6 px-2">
           Have you undergone these procedures before?{" "}
         </div>
-        <div className="flex flex-col md:flex-row items-start justify-around pt-4 pb-6">
+        <div className="flex flex-col md:flex-row items-start justify-around pt-4 px-2 pb-6">
           <div>
             <RadioButtonOne
               label="ICSI Procedure :"
@@ -100,7 +100,7 @@ export default function InputPage() {
             />
           </div>
         </div>
-        <div className="font-semibold text-xl">
+        <div className="font-semibold text-xl px-2">
           Do you have any of these medical conditions?
         </div>
         <div className="">
