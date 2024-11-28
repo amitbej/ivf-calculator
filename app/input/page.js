@@ -56,8 +56,11 @@ export default function InputPage() {
         </Link>
       </div>
       <div className="flex pl-6 pt-6 md:hidden">
-        <ArrowLeft/>
-        <Link href="/" className="font-semibold"> IVF Success Rate Calculator</Link>
+        <ArrowLeft />
+        <Link href="/" className="font-semibold">
+          {" "}
+          IVF Success Rate Calculator
+        </Link>
       </div>
       <div className="  flex flex-col md:items-center  pt-6 h-screen px-2 md:px-4">
         <div className="font-semibold text-xl">
@@ -112,15 +115,17 @@ export default function InputPage() {
             onChange={setMedicalConditions}
           />
         </div>
-       <div className="flex items-center justify-center pb-6">
-       <button
-          className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
-          onClick={handleSubmit}
-        >
-          Calculate
-        </button>
-       </div>
+       
       </div>{" "}
+
+      <div className="flex items-center justify-center mb-10 pb-10 ">
+          <button
+            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
+            onClick={handleSubmit}
+          >
+            Calculate
+          </button>
+        </div>
     </div>
   );
 }
