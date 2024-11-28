@@ -8,7 +8,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function ResultPage() {
-  const [successRate, setSuccessRate] = useState<number | null>(null);
+  const [successRate, setSuccessRate] = useState(null);
   const searchParams = useSearchParams();
 
   useEffect(() => {
