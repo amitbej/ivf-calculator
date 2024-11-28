@@ -100,7 +100,7 @@ export default function InputPage() {
         <div className="font-semibold text-xl">
           Do you have any of these medical conditions?
         </div>
-        <div className="mb-8">
+        <div className="">
           <CheckboxGroup
             options={[
               "PCOS",
@@ -112,12 +112,14 @@ export default function InputPage() {
             onChange={setMedicalConditions}
           />
         </div>
-        <button
+       <div className="flex items-center justify-center pb-6">
+       <button
           className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
           onClick={handleSubmit}
         >
           Calculate
         </button>
+       </div>
       </div>{" "}
     </div>
   );
