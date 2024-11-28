@@ -123,8 +123,7 @@ export default function InputPage() {
             Calculate
           </button>
         </div>
-      </div>
-    
+      </div>    
     </div>
   );
 }
