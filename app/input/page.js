@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import Slider from "@/components/Slider";
 import CheckboxGroup from "@/components/CheckboxGroup";
 import { calculateIVFSuccessRate } from "@/utils/calculateIVFSuccessRate";
-import RadioButtonOne from "@/components/RadioButtonone";
-import RadioButtonTwo from "@/components/RadioButtonTwo";
 import Link from "next/link";
 import { ArrowBigLeft, ArrowLeft } from "lucide-react";
+import RadioButtonTwo from "@/components/RadioButtonTwo";
+import RadioButtonOne from "@/components/RadioButtonOne";
 
 export default function InputPage() {
   const router = useRouter();
