@@ -26,7 +26,7 @@ export default function ResultPage() {
 
   return (
     <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2C3E50] flex flex-col justify-center min-h-screen">
-      <div className="hidden md:flex items-start pl-28 p-4 space-x-2">
+      <div className="hidden md:flex items-start pl-28  space-x-2">
         <Link href="/" className="text-white text-xl font-medium capitalize">
           Home
         </Link>
