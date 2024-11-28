@@ -5,28 +5,12 @@ import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export default function ResultPage() {
-  const [successRate, setSuccessRate] = useState(null);
+  // Use client-side rendering for search params
   const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const rateParam = searchParams.get("successRate");
-    if (rateParam) {
-      const parsedRate = parseFloat(rateParam);
-      setSuccessRate(parsedRate);
-    }
-  }, [searchParams]);
-
-  // Handle case where no success rate is found
-  if (successRate === null) {
-    return (
-      <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2C3E50] min-h-screen flex items-center justify-center">
-        <p className="text-white text-2xl">No success rate found</p>
-      </div>
-    );
-  }
+  const successRateParam = searchParams?.get("successRate") || "0";
+  const successRate = parseFloat(successRateParam);
 
   return (
     <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2C3E50] flex flex-col justify-center min-h-screen">
@@ -51,7 +35,9 @@ export default function ResultPage() {
       </div>
       <div className="flex pl-6 pt-6 items-center justify-center text-wrap md:hidden">
         <ArrowLeft className="text-white"/>
-        <Link href="/" className="font-semibold text-white"> IVF Success Rate Calculator</Link>
+        <Link href="/" className="font-semibold text-white"> 
+          IVF Success Rate Calculator
+        </Link>
       </div>
       <div className="py-12 md:py-40 mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -72,7 +58,7 @@ export default function ResultPage() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-[#1E1E1E] w-52 h-52 rounded-full shadow-2xl flex items-center justify-center">
                   <span className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#00FF94] to-[#E15B53]">
-                    {successRate.toFixed(0)}%
+                    {!isNaN(successRate) ? successRate.toFixed(0) : 0}%
                   </span>
                 </div>
               </div>
