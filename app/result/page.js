@@ -36,7 +36,7 @@ export default function ResultPage() {
         <ArrowLeft className="text-white"/>
         <Link href="/" className="font-semibold text-white"> IVF Success Rate Calculator</Link>
       </div>
-      <div className=" py-6 md:py-36 mx-auto max-w-6xl">
+      <div className=" py-12 md:py-40 mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 flex flex-col items-center">
