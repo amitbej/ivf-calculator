@@ -82,7 +82,7 @@ export default function InputPage() {
         <div className="font-semibold text-xl pt-6 px-2">
           Have you undergone these procedures before?{" "}
         </div>
-        <div className="flex flex-col md:flex-row items-start justify-around pt-4 px-2 pb-6">
+        <div className="flex flex-col md:flex-row items-start justify-around pt-4 pb-6 px-2">
           <div>
             <RadioButtonOne
               label="ICSI Procedure :"
@@ -115,10 +115,7 @@ export default function InputPage() {
             onChange={setMedicalConditions}
           />
         </div>
-       
-      </div>{" "}
-
-      <div className="flex items-center justify-center mb-10 pb-10 ">
+        <div className="flex items-center justify-center mb-10 pb-10">
           <button
             className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
             onClick={handleSubmit}
@@ -126,6 +123,11 @@ export default function InputPage() {
             Calculate
           </button>
         </div>
+      </div>{" "}
+
+
+
+      sdfgdfg
     </div>
   );
 }
