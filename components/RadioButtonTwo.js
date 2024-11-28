@@ -15,7 +15,7 @@ const RadioButtonTwo = ({ label, options, selected, onChange }) => {
                 checked={selected === option}
                 onChange={() => onChange(option)}
               />
-              <div className="max-w-xl rounded-full text-orange-400 hover:text-orange-500 hover:peer-checked:text-orange-500  ring-2 ring-transparent transition-all hover:shadow peer-checked:text-orange-600 peer-checked:ring-orange-400 peer-checked:ring-offset-2">
+              <div className="max-w-xl rounded-full text-gray-500 hover:text-orange-500 hover:peer-checked:text-orange-500  ring-2 ring-transparent transition-all hover:shadow peer-checked:text-orange-600 peer-checked:ring-orange-400 peer-checked:ring-offset-2">
                 <div>
                   {/* Custom icon or content when selected */}
                   <svg
