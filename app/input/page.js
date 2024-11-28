@@ -62,7 +62,7 @@ export default function InputPage() {
           IVF Success Rate Calculator
         </Link>
       </div>
-      <div className="  flex flex-col md:items-center  pt-6 h-screen px-2 md:px-4">
+      <div className="  flex flex-col md:items-center  pt-6 min-h-screen px-2 md:px-4">
         <div className="font-semibold text-xl px-2">
           {" "}
           What age range applies to you?{" "}
