@@ -124,10 +124,7 @@ export default function InputPage() {
           </button>
         </div>
       </div>
-     <div className="flex items-center justify-center py-4 gap-2">
-     Made By Amit Bej 
-     <Link href={"https://github.com/amitbej"}> <Link2 className="border bg-orange-500 text-white"/> </Link>
-     </div>
+    
     </div>
   );
 }
